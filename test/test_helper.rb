@@ -1,5 +1,5 @@
 #test/test_helper.rb
-require './lib/benzinator'
+require './lib/nfl_stats'
 require 'minitest/autorun'
 require 'webmock/minitest'
 require 'vcr'
