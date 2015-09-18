@@ -2,11 +2,12 @@ require "nfl_stats/version"
 require 'faraday'
 require 'json'
 
-API_URL = "http://www.nfl.com/liveupdate/game-center/2012010101/2012010101_gtd.json"
+API_URL = "http://www.nfl.com/liveupdate/game-center/"
 
 module NflStats
   def self.api(date)
-    response = Faraday.get(API_URL)
+    uri = API_URL + date + "/" + date + "_gtd.json"
+    response = Faraday.get(uri)
     attributes = JSON.parse(response.body)
     return attributes
   end

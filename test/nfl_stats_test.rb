@@ -14,7 +14,7 @@ class NflStatsTest < Minitest::Test
         "posteam", "stadium"
       ]
 
-      stats = NflStats.api("01/01/2014")
+      stats = NflStats.api("2012010101")
 
       assert_equal stats.keys, [date, "nextupdate"]
       assert_equal stats["nextupdate"], 345
